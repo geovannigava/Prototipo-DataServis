@@ -1,0 +1,62 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Gráficos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+        <ion-card>
+            <ion-card-header>
+                Primeira Semana - Maio/18
+            </ion-card-header>
+            <ion-card-content>
+                <canvas baseChart width="400" height="400"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+              <ion-card-header>
+                Primeira Semana - Maio/18
+              </ion-card-header>
+              <ion-card-content>
+                  <canvas baseChart
+                  [datasets]="barChartData"
+                  [labels]="barChartLabels"
+                  [options]="barChartOptions"
+                  [colors]="lineChartColors"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"></canvas>
+              </ion-card-content>
+            </ion-card>
+
+            <ion-card>
+                <ion-card-header>
+                  Vendedores - Maio/2018
+                </ion-card-header>
+                <ion-card-content>
+                    <canvas baseChart
+                    [data]="doughnutChartData"
+                    [labels]="doughnutChartLabels"
+                    [chartType]="doughnutChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+                </ion-card-content>
+              </ion-card>
+
+
+
+</ion-content>

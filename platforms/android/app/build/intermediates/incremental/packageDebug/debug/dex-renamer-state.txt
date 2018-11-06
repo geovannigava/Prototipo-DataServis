@@ -1,0 +1,4 @@
+#Fri Sep 14 11:09:58 BRT 2018
+base.0=C\:\\Users\\sisema5\\Documents\\prototipoApp\\prototipo\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+file.0=C\:\\Users\\sisema5\\Documents\\prototipoApp\\prototipo\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

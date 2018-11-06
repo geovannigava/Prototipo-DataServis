@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Fechamento de Caixa</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <br><br>
+    <form #f="ngForm" (ngSubmit)="pesquisar(f)">
+    <ion-grid>
+        <ion-row align-items: center>
+          <ion-col text-center>
+              <ion-item>
+                  <ion-label floating>CPF/CNPJ</ion-label>
+                  <ion-input [(ngModel)]="venda.cpfCnpj" (blur)="venda.cpfCnpj = format(venda.cpfCnpj)" name="cpf_cnpj"></ion-input>
+              </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row align-items: center>
+            <ion-col text-center>
+              <ion-item>
+                  <ion-label>Data</ion-label>
+                  <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="venda.dataVenda" name="dataVenda">
+                  </ion-datetime>
+                </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row align-items: center>
+              <ion-col text-center>
+                  <ion-list radio-group [(ngModel)]="venda.tipoVenda" name="tipoVenda" #tipoVenda="ngModel">
+                      <ion-item>
+                        <ion-label>Cartão</ion-label>
+                        <ion-radio value="1" checked></ion-radio>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label>Cartão / À Vista</ion-label>
+                        <ion-radio value="2"></ion-radio>
+                      </ion-item>
+                    </ion-list>
+              </ion-col>
+            </ion-row>
+            <br>
+            <button ion-button round type="submit" [disabled]="getvalida()" >Pesquisar</button>
+      </ion-grid>
+
+    </form>
+</ion-content>

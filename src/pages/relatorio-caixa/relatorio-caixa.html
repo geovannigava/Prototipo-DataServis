@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Relatório Fechamento</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+        <ion-grid >
+            <ion-row *ngFor="let venda of vendas"  class="brd margem" >
+              <ion-col  class="brd">
+                <ion-label style="font-weight: bold">Cliente:</ion-label>
+                <ion-item no-lines>
+                    {{venda.cliente}}
+                  </ion-item>
+              </ion-col>
+              <ion-col  class="brd">
+                  <ion-label  style="font-weight: bold">CPF/CNPJ:</ion-label>
+                   {{venda.cpfCnpj}}
+              </ion-col>
+              <ion-col class="brd">
+                  <ion-label style="font-weight: bold">Produto:</ion-label>
+                   {{venda.produto}}
+              </ion-col>
+              <ion-col class="brd">
+                  <ion-label style="font-weight: bold">Tipo de Venda:</ion-label>
+                   {{venda.tipoVenda}}
+              </ion-col>
+              <ion-col class="brd">
+                  <ion-label style="font-weight: bold">Valor Venda:</ion-label>
+                   {{venda.valorVenda}}
+              </ion-col>
+              <ion-col  class="brd">
+                  <ion-label style="font-weight: bold">Data:</ion-label>
+                   {{venda.dataVenda}}
+              </ion-col>
+            </ion-row>
+            <ion-row class="brd margem" >
+                <ion-col col-12 class="brd">
+                    <font style='font-weight:bold;'> Nro de Vendas: </font>
+                     {{total}}
+                </ion-col>
+                <ion-col col-12 class="brd">
+                    <font style='font-weight:bold;'> Total Recebido: </font>
+                     {{totalValor | currency}}
+                </ion-col>
+
+            </ion-row>
+          </ion-grid>
+      </ion-card>
+
+
+</ion-content>
